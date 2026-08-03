@@ -147,6 +147,19 @@ nav a:hover, nav a.active{color:var(--orange-deep);}
 .contact-card p, .contact-card a{font-size:15.5px;color:var(--ink);line-height:1.85;font-weight:600;}
 @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:24px;}}
 
+/* Podcast-Liste */
+.podcast-list{display:flex;flex-direction:column;gap:20px;}
+.podcast-card{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;padding:22px 24px;border:1px solid var(--line);border-radius:8px;}
+.podcast-cover{
+  width:96px;height:96px;border-radius:8px;border:2px dashed var(--green-deep);
+  background:var(--green-pale);display:flex;align-items:center;justify-content:center;color:var(--green-deep);
+}
+.podcast-cover svg{width:30px;height:30px;stroke:var(--green-deep);}
+.podcast-card h3{font-family:'Fraunces',serif;font-size:17px;margin-bottom:4px;color:var(--ink);}
+.podcast-card p{font-size:14px;color:var(--ink-soft);margin-bottom:8px;}
+.podcast-tag{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--orange-deep);}
+@media(max-width:600px){.podcast-card{grid-template-columns:72px 1fr;}}
+
 footer{padding:48px 0 32px;border-top:1px solid var(--line);}
 .footer-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;margin-bottom:24px;border-bottom:1px solid var(--line);}
 .footer-newsletter h3{font-family:'Fraunces',serif;font-size:16px;margin-bottom:6px;color:var(--ink);}
