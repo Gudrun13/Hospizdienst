@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambulanter Hospizdienst WHV-FRI — Entwurf 1 (Markenfarben)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lime:#DFEE99;
+    --lime-pale:#F1F8D9;
+    --olive:#7E9C3C;
+    --olive-deep:#5F7830;
+    --gray-panel:#DADADA;
+    --orange:#E07B29;
+    --ink:#2A2820;
+    --white:#FFFFFF;
+    --line:#E6E6E6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--white);color:var(--ink);font-family:'Mulish',sans-serif;font-size:16px;line-height:1.65;}
+  h1,h2,h3{font-family:'Quicksand',sans-serif;font-weight:600;color:var(--olive-deep);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Quicksand',sans-serif;font-size:18px;font-weight:700;color:var(--olive-deep);}
+  .brand span{display:block;font-family:'Mulish',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:0.04em;color:var(--olive);text-transform:uppercase;margin-top:2px;}
+  nav{display:flex;gap:26px;font-size:14.5px;font-weight:600;}
+  nav a{color:var(--olive-deep);}
+  nav a:hover{color:var(--orange);}
+  .hdr-cta{background:var(--olive);color:var(--white);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;white-space:nowrap;}
+  .hdr-cta:hover{background:var(--olive-deep);}
+  @media(max-width:820px){nav{display:none;}}
+
+  .hero{background:var(--lime);padding:76px 0 96px;position:relative;overflow:hidden;}
+  .hero-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:52px;align-items:center;}
+  .hero-eyebrow{font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--olive-deep);font-weight:700;margin-bottom:16px;display:block;}
+  .hero h1{font-size:clamp(32px,4.4vw,50px);line-height:1.12;margin-bottom:20px;color:var(--olive-deep);}
+  .hero p{font-size:17px;color:#3A3826;max-width:46ch;margin-bottom:30px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{background:var(--olive);color:var(--white);padding:14px 26px;border-radius:10px;font-size:15px;font-weight:700;}
+  .btn-primary:hover{background:var(--olive-deep);}
+  .btn-ghost{border:2px solid var(--olive-deep);color:var(--olive-deep);padding:12px 24px;border-radius:10px;font-size:15px;font-weight:700;}
+  .btn-ghost:hover{background:rgba(95,120,48,0.08);}
+  .hero-media{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(165deg,#EAF3C4 0%,#B9D57E 45%,var(--olive) 100%);}
+  .ribbon{
+    position:absolute;top:26px;right:-38px;background:var(--orange);color:var(--white);
+    font-family:'Quicksand',sans-serif;font-weight:700;font-size:14px;
+    padding:9px 48px;transform:rotate(38deg);box-shadow:0 4px 10px rgba(0,0,0,0.18);
+  }
+
+  .mission{padding:88px 0;}
+  .mission-inner{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start;}
+  .kicker{font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--olive);font-weight:700;margin-bottom:14px;display:block;}
+  .mission h2{font-size:28px;margin-bottom:18px;}
+  .mission p{color:#4A4838;font-size:16px;margin-bottom:16px;max-width:56ch;}
+  @media(max-width:820px){.mission-inner,.hero-inner{grid-template-columns:1fr;}}
+
+  .banner{background:var(--lime);border-radius:14px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .banner-date{font-size:12.5px;color:var(--olive-deep);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:8px;display:block;font-weight:700;}
+  .banner h3{font-size:20px;margin-bottom:4px;color:var(--ink);}
+  .banner a.link{color:var(--olive-deep);font-weight:700;border-bottom:2px solid var(--orange);padding-bottom:2px;white-space:nowrap;font-size:14.5px;}
+
+  .services{padding:96px 0;background:var(--lime-pale);}
+  .services-head{max-width:56ch;margin-bottom:48px;}
+  .services-head h2{font-size:28px;}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .service{background:var(--white);border-radius:14px;padding:30px 26px;border:1px solid var(--line);}
+  .service h3{font-size:18px;margin-bottom:10px;color:var(--olive-deep);}
+  .service p{font-size:14.5px;color:#5A584B;}
+  @media(max-width:820px){.service-grid{grid-template-columns:1fr;}}
+
+  .team{padding:88px 0;}
+  .team-inner{display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:center;}
+  .team h2{font-size:26px;margin-bottom:16px;}
+  .team p{color:#4A4838;max-width:48ch;margin-bottom:24px;}
+  .team-list{display:flex;flex-direction:column;gap:0;}
+  .team-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:14px 0;font-size:15px;}
+  .team-row span:last-child{color:var(--olive);font-size:13.5px;font-weight:600;}
+  @media(max-width:820px){.team-inner{grid-template-columns:1fr;}}
+
+  .contact{padding:0 0 96px;background:linear-gradient(180deg,var(--white) 0%,var(--lime-pale) 60%,var(--lime) 100%);}
+  .contact-inner{padding-top:88px;}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+  .contact-card h3{font-size:15px;margin-bottom:10px;color:var(--olive-deep);}
+  .contact-card p, .contact-card a{font-size:15px;color:#3A3826;line-height:1.85;}
+  .contact-card a{border-bottom:1px solid transparent;font-weight:600;}
+  .contact-card a:hover{border-color:var(--olive-deep);}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:28px;}}
+
+  footer{padding:32px 0;background:var(--lime);}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13.5px;color:var(--olive-deep);}
+  .footer-links{display:flex;gap:20px;font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">Hospizdienst Wilhelmshaven-Friesland<span>Ambulant · seit 1996</span></div>
+    <nav>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#team">Team</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="#kontakt" class="hdr-cta">Kontakt aufnehmen</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="hero-eyebrow">Ambulanter Hospizdienst e. V.</span>
+      <h1>Leben bis zuletzt — begleitet und in vertrauter Umgebung.</h1>
+      <p>Der Tod ist für alle unausweichlich, das Sterben aber eine Zeit des Lebens. Wir begleiten Menschen in Wilhelmshaven und Friesland dabei, diese Zeit würdevoll und zu Hause zu verbringen.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-primary">Kontakt aufnehmen</a>
+        <a href="#" class="btn-ghost">Flyer bestellen</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="ribbon">Jetzt spenden</div>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="wrap mission-inner">
+    <div>
+      <span class="kicker">Unser Auftrag</span>
+      <h2>Niemand sollte allein sterben müssen.</h2>
+    </div>
+    <div>
+      <p>Viele Menschen wünschen sich, ihre letzte Lebenszeit umsorgt und in vertrauter Umgebung zu verbringen. Für viele geht dieser Wunsch nicht in Erfüllung — nicht aus Mangel an Wunsch, sondern aus Mangel an Begleitung.</p>
+      <p>Unsere ehrenamtlichen Begleiterinnen und Begleiter, koordiniert von einem hauptamtlichen Team, unterstützen Betroffene und ihre Angehörigen zu Hause, kostenfrei und unabhängig von Konfession oder Weltanschauung.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="margin-bottom:56px;">
+  <div class="banner">
+    <div>
+      <span class="banner-date">14. Januar 2026</span>
+      <h3>Qualifizierungskurs 2027: Anmeldung möglich</h3>
+    </div>
+    <a href="#" class="link">Mehr erfahren →</a>
+  </div>
+</section>
+
+<section class="services" id="leistungen">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="kicker">Leistungen</span>
+      <h2>Wie wir begleiten</h2>
+    </div>
+    <div class="service-grid">
+      <div class="service"><h3>Zu Hause</h3><p>Persönliche, ehrenamtliche Sterbebegleitung für Erwachsene im eigenen Zuhause.</p></div>
+      <div class="service"><h3>Familienbegleitung</h3><p>Begleitung für Kinder mit lebenslimitierender Erkrankung und ihre Familien.</p></div>
+      <div class="service"><h3>Trauerangebote</h3><p>Unterstützung für Angehörige über den Tod hinaus.</p></div>
+      <div class="service"><h3>Hospiz macht Schule</h3><p>Bildungsangebote für Kinder und Jugendliche rund um Sterben und Trauer.</p></div>
+      <div class="service"><h3>Letzte-Hilfe-Kurse</h3><p>Grundwissen zur Begleitung Sterbender für Angehörige und Interessierte.</p></div>
+      <div class="service"><h3>Qualifizierung</h3><p>Regelmäßige Kurse bereiten neue Ehrenamtliche auf ihre Aufgabe vor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="wrap team-inner">
+    <div>
+      <span class="kicker">Ansprechpartner</span>
+      <h2>Unser Büro</h2>
+      <p>Montag, Mittwoch und Freitag von 9:00 bis 12:00 Uhr sowie nach Vereinbarung erreichbar.</p>
+      <a href="#kontakt" class="btn-ghost">Kontaktformular öffnen</a>
+    </div>
+    <div class="team-list">
+      <div class="team-row"><span>Beate Richter</span><span>Koordinatorin</span></div>
+      <div class="team-row"><span>Stefanie Gründler</span><span>Koordinatorin</span></div>
+      <div class="team-row"><span>Sandra Gimmel</span><span>Bürokraft</span></div>
+      <div class="team-row"><span>Rolf Heßelbarth</span><span>Vorsitzender</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap contact-inner">
+    <div class="services-head">
+      <span class="kicker">Kontakt</span>
+      <h2>Wir sind für Sie erreichbar</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card"><h3>Telefon &amp; E-Mail</h3><p><a href="tel:+494421745258">04421 745258</a><br><a href="mailto:info@hospiz-whv-fri.de">info@hospiz-whv-fri.de</a></p></div>
+      <div class="contact-card"><h3>Anschrift</h3><p>Parkstraße 17<br>26382 Wilhelmshaven</p></div>
+      <div class="contact-card"><h3>Bürozeiten</h3><p>Mo, Mi, Fr · 9:00–12:00 Uhr<br>und nach Vereinbarung</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© Ambulanter Hospizdienst Wilhelmshaven-Friesland e. V.</span>
+    <div class="footer-links"><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">Sitemap</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
