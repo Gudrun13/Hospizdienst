@@ -1,0 +1,8 @@
+{
+  "name": "hospizdienst-foto-tools",
+  "private": true,
+  "description": "Kleines Werkzeug, um Rohfotos (beliebiges Format) fuer die Homepage auf einheitliche Groesse/Kompression zu bringen.",
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}
