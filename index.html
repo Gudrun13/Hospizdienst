@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -135,6 +135,23 @@
       <div class="contact-card"><h3>Anschrift</h3><p>Parkstraße 17<br>26382 Wilhelmshaven</p></div>
       <div class="contact-card"><h3>Bürozeiten</h3><p>Mo, Mi, Fr · 9:00–12:00 Uhr<br>und nach Vereinbarung</p></div>
     </div>
+    <!-- Versand folgt beim Umzug auf Hostinger (PHP-Mail-Skript), bis dahin bewusst ohne Funktion -->
+    <form class="contact-form" onsubmit="return false">
+      <h3>Oder schreiben Sie uns direkt</h3>
+      <div>
+        <label for="kontakt-name">Name</label>
+        <input type="text" id="kontakt-name" name="name" required>
+      </div>
+      <div>
+        <label for="kontakt-email">E-Mail</label>
+        <input type="email" id="kontakt-email" name="email" required>
+      </div>
+      <div>
+        <label for="kontakt-anliegen">Ihr Anliegen</label>
+        <textarea id="kontakt-anliegen" name="anliegen" required></textarea>
+      </div>
+      <button type="submit" class="btn-dark">Nachricht senden</button>
+    </form>
   </div>
 </section>
 </main>
