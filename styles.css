@@ -37,7 +37,7 @@ img{max-width:100%;display:block;}
 
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:22px 32px;max-width:1180px;margin:0 auto;}
-.brand{font-family:'Quicksand',sans-serif;font-size:1.188rem;font-weight:600;}
+.brand{font-family:'Quicksand',sans-serif;font-size:1.188rem;font-weight:600;color:var(--orange-deep);}
 nav{display:flex;gap:30px;font-size:0.875rem;font-weight:600;}
 nav a:hover, nav a.active{color:var(--green-deep);}
 .hdr-cta{background:var(--green);color:var(--ink);padding:10px 22px;border-radius:999px;font-size:0.844rem;font-weight:700;}
