@@ -19,6 +19,7 @@
   --green-pale: color-mix(in srgb, var(--green) 20%, white);
   --green-deep: color-mix(in srgb, var(--green) 47%, black);
   --orange:#FFC648;
+  --orange-pale: color-mix(in srgb, var(--orange) 20%, white);
   --orange-deep: color-mix(in srgb, var(--orange) 55%, black);
   --ink:#473C24;
   --ink-soft:#5A4F36;
@@ -78,7 +79,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
 .btn-dark{background:var(--green);color:var(--ink);padding:15px 28px;border-radius:999px;font-size:0.906rem;font-weight:700;}
 .btn-dark:hover{background:var(--green-deep);color:var(--white);}
-.btn-line{border:2px solid var(--green-deep);color:var(--green-deep);padding:13px 26px;border-radius:999px;font-size:0.906rem;font-weight:700;}
+.btn-line{border:2px solid var(--orange-deep);color:var(--orange-deep);padding:13px 26px;border-radius:999px;font-size:0.906rem;font-weight:700;}
 .btn-line:hover{border-color:var(--ink);color:var(--ink);}
 .hero-block{margin:40px 32px 40px 0;aspect-ratio:auto;}
 @media(max-width:900px){.hero{grid-template-columns:1fr;}.hero-block{min-height:280px;}}
@@ -124,7 +125,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
   background:var(--green-pale);padding:34px 40px;border-radius:4px;
   display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
 }
-.banner-flat .banner-date{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--green-deep);font-weight:700;display:block;margin-bottom:6px;}
+.banner-flat .banner-date{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--orange-deep);font-weight:700;display:block;margin-bottom:6px;}
 .banner-flat h3{font-size:1.188rem;}
 .banner-flat a{color:var(--orange-deep);border-bottom:2px solid var(--orange-deep);font-weight:700;font-size:0.875rem;white-space:nowrap;}
 
@@ -179,10 +180,10 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .podcast-list{display:flex;flex-direction:column;gap:20px;}
 .podcast-card{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;padding:22px 24px;border:1px solid var(--line);border-radius:8px;}
 .podcast-cover{
-  width:96px;height:96px;border-radius:8px;border:2px dashed var(--green-deep);
-  background:var(--green-pale);display:flex;align-items:center;justify-content:center;color:var(--green-deep);
+  width:96px;height:96px;border-radius:8px;border:2px dashed var(--orange-deep);
+  background:var(--orange-pale);display:flex;align-items:center;justify-content:center;color:var(--orange-deep);
 }
-.podcast-cover svg{width:30px;height:30px;stroke:var(--green-deep);}
+.podcast-cover svg{width:30px;height:30px;stroke:var(--orange-deep);}
 .podcast-card h3{font-family:'Quicksand',sans-serif;font-size:1.063rem;margin-bottom:4px;color:var(--ink);}
 .podcast-card p{font-size:0.875rem;color:var(--ink-soft);margin-bottom:8px;}
 .podcast-tag{font-size:0.719rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--orange-deep);}
@@ -192,10 +193,10 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .entry-list{display:flex;flex-direction:column;gap:20px;}
 .entry-card{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;padding:22px 24px;border:1px solid var(--line);border-radius:8px;}
 .entry-cover{
-  width:96px;height:96px;border-radius:8px;border:2px dashed var(--green-deep);
-  background:var(--green-pale);display:flex;align-items:center;justify-content:center;color:var(--green-deep);
+  width:96px;height:96px;border-radius:8px;border:2px dashed var(--orange-deep);
+  background:var(--orange-pale);display:flex;align-items:center;justify-content:center;color:var(--orange-deep);
 }
-.entry-cover svg{width:30px;height:30px;stroke:var(--green-deep);}
+.entry-cover svg{width:30px;height:30px;stroke:var(--orange-deep);}
 .entry-card h3{font-family:'Quicksand',sans-serif;font-size:1.063rem;margin-bottom:4px;color:var(--ink);}
 .entry-card p{font-size:0.875rem;color:var(--ink-soft);margin-bottom:8px;}
 .entry-tag{font-size:0.719rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--orange-deep);}
