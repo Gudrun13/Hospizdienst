@@ -38,24 +38,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
 
-/* Topbar mit Suche */
-.topbar{background:var(--green-pale);border-bottom:1px solid var(--line);}
-.topbar-inner{display:flex;justify-content:flex-end;align-items:center;max-width:1180px;margin:0 auto;padding:8px 32px;}
-.search-form{display:flex;align-items:center;}
-.search-input{
-  font-family:'Mulish',sans-serif;font-size:0.844rem;padding:7px 16px;
-  border:1px solid var(--line);border-right:none;border-radius:999px 0 0 999px;
-  background:var(--white);color:var(--ink);width:180px;
-}
-.search-input:focus{outline:2px solid var(--green-deep);outline-offset:-1px;}
-.search-btn{
-  display:flex;align-items:center;justify-content:center;
-  background:var(--green-deep);border:1px solid var(--green-deep);border-radius:0 999px 999px 0;
-  padding:7px 12px;cursor:pointer;
-}
-.search-btn:hover{background:var(--ink);border-color:var(--ink);}
-.search-btn svg{width:15px;height:15px;stroke:var(--white);}
-
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);}
 .header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;padding:22px 32px;max-width:1180px;margin:0 auto;}
 .brand{font-family:'Quicksand',sans-serif;font-size:1.188rem;font-weight:600;color:var(--orange-deep);}
@@ -205,6 +187,31 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .podcast-card p{font-size:0.875rem;color:var(--ink-soft);margin-bottom:8px;}
 .podcast-tag{font-size:0.719rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--orange-deep);}
 @media(max-width:600px){.podcast-card{grid-template-columns:72px 1fr;}}
+
+/* Aktuelles und Presse: gleiches Muster wie die Podcast-Liste, neutral benannt */
+.entry-list{display:flex;flex-direction:column;gap:20px;}
+.entry-card{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;padding:22px 24px;border:1px solid var(--line);border-radius:8px;}
+.entry-cover{
+  width:96px;height:96px;border-radius:8px;border:2px dashed var(--green-deep);
+  background:var(--green-pale);display:flex;align-items:center;justify-content:center;color:var(--green-deep);
+}
+.entry-cover svg{width:30px;height:30px;stroke:var(--green-deep);}
+.entry-card h3{font-family:'Quicksand',sans-serif;font-size:1.063rem;margin-bottom:4px;color:var(--ink);}
+.entry-card p{font-size:0.875rem;color:var(--ink-soft);margin-bottom:8px;}
+.entry-tag{font-size:0.719rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--orange-deep);}
+@media(max-width:600px){.entry-card{grid-template-columns:72px 1fr;}}
+
+/* Menschenlesbare Seitenuebersicht */
+.sitemap-list{border-top:1px solid var(--line);}
+.sitemap-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);}
+.sitemap-row h3{font-size:1.063rem;font-weight:600;}
+.sitemap-row p{font-size:0.875rem;color:var(--ink-soft);margin-top:2px;}
+.sitemap-row a.go{font-size:0.875rem;font-weight:700;color:var(--green-deep);white-space:nowrap;}
+.sitemap-note{color:var(--ink-soft);font-size:0.906rem;margin-top:24px;}
+
+/* Datenschutz-Hinweis am Kontaktformular */
+.form-privacy-note{font-size:0.813rem;color:var(--ink-soft);max-width:44ch;margin-top:-4px;}
+.form-privacy-note a{color:var(--green-deep);font-weight:600;border-bottom:1px solid var(--green-deep);}
 
 footer{padding:48px 0 32px;border-top:1px solid var(--line);}
 .footer-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;margin-bottom:24px;border-bottom:1px solid var(--line);}
