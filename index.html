@@ -34,7 +34,7 @@
   "areaServed": "Wilhelmshaven und Friesland"
 }
 </script>
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -51,7 +51,9 @@
   </div>
   <div class="header-inner">
     <a href="index.html" class="brand">Hospizdienst WHV·FRI</a>
-    <nav>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <nav id="hauptnav">
+      <a href="#kontakt" class="nav-cta-mobile">Kontakt aufnehmen</a>
       <a href="hospizdienst.html">Hospizdienst</a>
       <a href="leistungen.html">Unsere Leistungen</a>
       <a href="team.html">Unser Team</a>
@@ -60,6 +62,9 @@
       <a href="podcasts.html">Podcasts</a>
     </nav>
     <a href="#kontakt" class="hdr-cta">Kontakt aufnehmen</a>
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menü öffnen oder schließen" aria-controls="hauptnav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </label>
   </div>
 </header>
 

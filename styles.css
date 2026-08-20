@@ -57,13 +57,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .search-btn svg{width:15px;height:15px;stroke:var(--white);}
 
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:22px 32px;max-width:1180px;margin:0 auto;}
+.header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;padding:22px 32px;max-width:1180px;margin:0 auto;}
 .brand{font-family:'Quicksand',sans-serif;font-size:1.188rem;font-weight:600;color:var(--orange-deep);}
 nav{display:flex;gap:30px;font-size:0.875rem;font-weight:600;}
 nav a:hover, nav a.active{color:var(--green-deep);}
+.nav-cta-mobile{display:none;}
 .hdr-cta{background:var(--green);color:var(--ink);padding:10px 22px;border-radius:999px;font-size:0.844rem;font-weight:700;}
 .hdr-cta:hover{background:var(--green-deep);color:var(--white);}
-@media(max-width:820px){nav{display:none;}}
+
+/* Mobiles Menue: reiner Checkbox-Trick, funktioniert ohne JavaScript */
+.nav-toggle{display:none;}
+.nav-toggle-label{display:none;align-items:center;justify-content:center;width:44px;height:44px;cursor:pointer;flex:none;}
+.nav-toggle-label svg{width:26px;height:26px;stroke:var(--ink);}
+
+@media(max-width:820px){
+  .hdr-cta{display:none;}
+  .nav-toggle-label{display:flex;}
+  nav{
+    display:flex;flex-direction:column;gap:0;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    max-height:0;overflow:hidden;transition:max-height .25s ease;
+  }
+  nav a{padding:16px 32px;border-bottom:1px solid var(--line);}
+  .nav-toggle:checked ~ nav{max-height:520px;}
+  .nav-cta-mobile{
+    display:block;background:var(--green);color:var(--ink);font-weight:700;text-align:center;
+  }
+  .nav-cta-mobile:hover{background:var(--green-deep);color:var(--white);}
+}
 
 /* Split hero */
 .hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;min-height:560px;}
