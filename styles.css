@@ -214,6 +214,15 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .form-privacy-note{font-size:0.813rem;color:var(--ink-soft);max-width:44ch;margin-top:-4px;}
 .form-privacy-note a{color:var(--green-deep);font-weight:600;border-bottom:1px solid var(--green-deep);}
 
+/* Lange Rechtstexte (Datenschutz, Impressum): einspaltig, gut lesbar */
+.legal-content{max-width:74ch;}
+.legal-content h2{font-size:1.25rem;margin-top:40px;margin-bottom:12px;}
+.legal-content h2:first-child{margin-top:0;}
+.legal-content p{color:var(--ink-soft);margin-bottom:16px;}
+.legal-content ul{color:var(--ink-soft);margin:0 0 16px;padding-left:22px;}
+.legal-content li{margin-bottom:4px;}
+.legal-content a{color:var(--green-deep);font-weight:600;border-bottom:1px solid var(--green-deep);}
+
 footer{padding:48px 0 32px;border-top:1px solid var(--line);}
 .footer-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;margin-bottom:24px;border-bottom:1px solid var(--line);}
 .footer-newsletter h3{font-family:'Quicksand',sans-serif;font-size:1rem;margin-bottom:6px;color:var(--ink);}
