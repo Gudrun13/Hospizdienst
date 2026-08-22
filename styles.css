@@ -74,14 +74,14 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 /* Split hero */
 .hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;min-height:560px;}
 .hero-copy{padding:100px 56px 60px 32px;display:flex;flex-direction:column;justify-content:center;}
-.hero-eyebrow{background:var(--orange);color:#000;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:20px;display:inline-block;padding:5px 12px;border-radius:999px;}
+.hero-eyebrow{color:var(--orange);font-size:0.813rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:20px;display:block;}
 .hero h1{font-size:clamp(2.25rem,4.8vw,3.625rem);line-height:1.06;margin-bottom:26px;max-width:14ch;}
 .hero p{font-size:1.094rem;color:var(--ink-soft);max-width:44ch;margin-bottom:32px;}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
 .btn-dark{background:var(--green);color:var(--ink);padding:15px 28px;border-radius:999px;font-size:0.906rem;font-weight:700;}
 .btn-dark:hover{background:var(--green-deep);color:var(--white);}
-.btn-line{background:var(--orange);color:#000;padding:15px 28px;border-radius:999px;font-size:0.906rem;font-weight:700;}
-.btn-line:hover{background:var(--orange-deep);color:var(--white);}
+.btn-line{border:2px solid var(--orange);color:var(--orange);padding:13px 26px;border-radius:999px;font-size:0.906rem;font-weight:700;}
+.btn-line:hover{background:var(--orange);color:#000;}
 
 /* Volltonfarbe Orange, wie der "Jetzt spenden"-Aufkleber auf der echten Live-Seite (dort schwarze Schrift, wegen Kontrast uebernommen) */
 .btn-orange{background:var(--orange);color:#000;padding:15px 28px;border-radius:999px;font-size:0.906rem;font-weight:700;}
@@ -90,7 +90,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 @media(max-width:900px){.hero{grid-template-columns:1fr;}.hero-block{min-height:280px;}}
 
 /* Kicker-Label, ueberall auf der Seite gleich, ausser wo unten gezielt ueberschrieben */
-.kicker{background:var(--orange);color:#000;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:14px;display:inline-block;padding:5px 12px;border-radius:999px;}
+.kicker{color:var(--orange);font-size:0.781rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:14px;display:block;}
 
 /* Seitenkopf fuer Unterseiten */
 .page-header{background:var(--green-pale);padding:64px 0 52px;}
@@ -130,7 +130,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
   background:var(--green-pale);padding:34px 40px;border-radius:4px;
   display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
 }
-.banner-flat .banner-date{background:var(--orange);color:#000;font-size:0.688rem;text-transform:uppercase;letter-spacing:0.04em;font-weight:700;display:inline-block;padding:4px 10px;border-radius:999px;margin-bottom:8px;}
+.banner-flat .banner-date{color:var(--orange);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;display:block;margin-bottom:6px;}
 .banner-flat h3{font-size:1.188rem;}
 .banner-flat a{color:var(--orange-deep);border-bottom:2px solid var(--orange-deep);font-weight:700;font-size:0.875rem;white-space:nowrap;}
 
@@ -145,7 +145,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .photo-placeholder.round{border-radius:50%;aspect-ratio:1/1;}
 
 .team-block{background:linear-gradient(135deg, color-mix(in srgb, var(--green) 45%, white) 0%, color-mix(in srgb, var(--green) 78%, white) 100%);color:var(--ink);padding:56px 0;}
-.team-block .kicker{background:var(--white);color:var(--green-deep);margin-bottom:10px;}
+.team-block .kicker{color:var(--green-deep);margin-bottom:10px;}
 .team-block h2{color:var(--ink);font-size:1.313rem;margin-bottom:10px;}
 .team-block p{color:var(--ink-soft);max-width:46ch;margin-bottom:0;font-size:0.906rem;}
 .team-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 40px;margin-top:24px;}
@@ -191,7 +191,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .podcast-cover svg{width:30px;height:30px;stroke:var(--orange-deep);}
 .podcast-card h3{font-family:'Quicksand',sans-serif;font-size:1.063rem;margin-bottom:4px;color:var(--ink);}
 .podcast-card p{font-size:0.875rem;color:var(--ink-soft);margin-bottom:8px;}
-.podcast-tag{background:var(--orange);color:#000;font-size:0.688rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;display:inline-block;padding:3px 9px;border-radius:999px;}
+.podcast-tag{color:var(--orange);font-size:0.719rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;}
 @media(max-width:600px){.podcast-card{grid-template-columns:72px 1fr;}}
 
 /* Aktuelles und Presse: gleiches Muster wie die Podcast-Liste, neutral benannt */
@@ -204,7 +204,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .entry-cover svg{width:30px;height:30px;stroke:var(--orange-deep);}
 .entry-card h3{font-family:'Quicksand',sans-serif;font-size:1.063rem;margin-bottom:4px;color:var(--ink);}
 .entry-card p{font-size:0.875rem;color:var(--ink-soft);margin-bottom:8px;}
-.entry-tag{background:var(--orange);color:#000;font-size:0.688rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;display:inline-block;padding:3px 9px;border-radius:999px;}
+.entry-tag{color:var(--orange);font-size:0.719rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;}
 @media(max-width:600px){.entry-card{grid-template-columns:72px 1fr;}}
 
 /* Menschenlesbare Seitenuebersicht */
