@@ -20,7 +20,7 @@
   --green-deep: color-mix(in srgb, var(--green) 47%, black);
   --orange:#FF760D;
   --orange-pale: color-mix(in srgb, var(--orange) 20%, white);
-  --orange-deep: color-mix(in srgb, var(--orange) 55%, black);
+  --orange-deep: color-mix(in srgb, var(--orange) 70%, black);
   --ink:#473C24;
   --ink-soft:#5A4F36;
   --white:#FFFFFF;
@@ -80,7 +80,7 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .btn-dark{background:var(--green);color:var(--ink);padding:15px 28px;border-radius:999px;font-size:0.906rem;font-weight:700;}
 .btn-dark:hover{background:var(--green-deep);color:var(--white);}
 .btn-line{border:2px solid var(--orange-deep);color:var(--orange-deep);padding:13px 26px;border-radius:999px;font-size:0.906rem;font-weight:700;}
-.btn-line:hover{border-color:var(--ink);color:var(--ink);}
+.btn-line:hover{background:var(--orange-deep);border-color:var(--orange-deep);color:var(--white);}
 
 /* Volltonfarbe Orange, wie der "Jetzt spenden"-Aufkleber auf der echten Live-Seite (dort schwarze Schrift, wegen Kontrast uebernommen) */
 .btn-orange{background:var(--orange);color:#000;padding:15px 28px;border-radius:999px;font-size:0.906rem;font-weight:700;}
