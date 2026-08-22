@@ -3,6 +3,7 @@
   "private": true,
   "description": "Kleines Werkzeug, um Rohfotos (beliebiges Format) fuer die Homepage auf einheitliche Groesse/Kompression zu bringen.",
   "dependencies": {
+    "qrcode": "^1.5.4",
     "sharp": "^0.33.0"
   }
 }

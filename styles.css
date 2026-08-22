@@ -168,6 +168,10 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
 .contact-card h3{font-size:0.813rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--green-deep);margin-bottom:10px;font-weight:700;}
 .contact-card p, .contact-card a{font-size:0.969rem;color:var(--ink);line-height:1.85;font-weight:600;}
+.giro-qr{width:130px;height:130px;margin-top:14px;border:1px solid var(--line);border-radius:8px;}
+.giro-caption{font-size:0.813rem;color:var(--ink-soft);font-weight:500;line-height:1.5;margin-top:8px;max-width:32ch;}
+.maps-note{margin-top:10px;font-size:0.813rem;color:var(--ink-soft);font-weight:500;line-height:1.5;}
+.maps-note a{color:var(--green-deep);font-weight:700;border-bottom:1px solid var(--green-deep);}
 @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:24px;}}
 
 .contact-form{display:flex;flex-direction:column;gap:16px;max-width:480px;margin-top:40px;}
