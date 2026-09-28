@@ -211,6 +211,15 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .entry-tag{color:var(--orange);font-size:0.719rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;}
 @media(max-width:600px){.entry-card{grid-template-columns:72px 1fr;}}
 
+/* Wochenplan: regelmäßige, wiederkehrende Angebote */
+.schedule-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.schedule-row{display:grid;grid-template-columns:160px 1fr;gap:20px;padding:18px 24px;align-items:center;}
+.schedule-row+.schedule-row{border-top:1px solid var(--line);}
+.schedule-when{font-family:'Quicksand',sans-serif;font-weight:700;color:var(--green-deep);font-size:0.938rem;}
+.schedule-what h3{font-family:'Quicksand',sans-serif;font-size:1.031rem;margin-bottom:2px;color:var(--ink);}
+.schedule-what p{font-size:0.875rem;color:var(--ink-soft);}
+@media(max-width:600px){.schedule-row{grid-template-columns:1fr;gap:6px;}}
+
 /* Menschenlesbare Seitenuebersicht */
 .sitemap-list{border-top:1px solid var(--line);}
 .sitemap-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);}
