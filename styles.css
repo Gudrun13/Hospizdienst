@@ -238,8 +238,9 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 
 footer{padding:48px 0 32px;border-top:1px solid var(--line);}
 .footer-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;margin-bottom:24px;border-bottom:1px solid var(--line);}
-.footer-newsletter h3{font-family:'Quicksand',sans-serif;font-size:1rem;margin-bottom:6px;color:var(--ink);}
-.footer-newsletter p{font-size:0.844rem;color:var(--ink-soft);margin-bottom:14px;max-width:38ch;}
+.footer-geschichte{max-width:38ch;}
+.footer-geschichte h3,.footer-newsletter h3{font-family:'Quicksand',sans-serif;font-size:1rem;margin-bottom:6px;color:var(--ink);}
+.footer-geschichte p,.footer-newsletter p{font-size:0.844rem;color:var(--ink-soft);margin-bottom:14px;max-width:38ch;}
 .newsletter-form{display:flex;max-width:360px;}
 .newsletter-input{
   flex:1;font-family:'Mulish',sans-serif;font-size:0.875rem;padding:10px 16px;
