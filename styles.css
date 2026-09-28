@@ -265,3 +265,6 @@ footer{padding:48px 0 32px;border-top:1px solid var(--line);}
 .footer-brand{display:flex;align-items:center;gap:12px;}
 .footer-logo{height:34px;width:auto;display:block;}
 .footer-links{display:flex;gap:20px;font-weight:600;}
+.footer-social a{color:var(--ink-soft);display:inline-flex;}
+.footer-social svg{width:20px;height:20px;}
+.footer-social a:hover{color:var(--green-deep);}
