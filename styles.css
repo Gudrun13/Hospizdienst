@@ -239,6 +239,19 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .form-privacy-note{font-size:0.813rem;color:var(--ink-soft);max-width:44ch;margin-top:-4px;}
 .form-privacy-note a{color:var(--green-deep);font-weight:600;border-bottom:1px solid var(--green-deep);}
 
+/* Kooperationspartner: Logo-Kacheln */
+.partner-grid{display:flex;flex-wrap:wrap;gap:24px;}
+.partner-card{width:160px;text-align:center;}
+.partner-logo{
+  width:160px;height:100px;border-radius:8px;border:2px dashed var(--green-deep);
+  background:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;color:var(--green-deep);
+}
+.partner-logo svg{width:26px;height:26px;stroke:var(--green-deep);}
+.partner-logo span{font-size:0.688rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;}
+.partner-card p{margin-top:10px;font-size:0.875rem;font-weight:600;color:var(--ink);}
+@media(max-width:600px){.partner-card{width:140px;}.partner-logo{width:140px;}}
+
 /* Glossar-Begriffe: Fachwörter mit Erklärung beim Hover/Fokus */
 .glossar-begriff{
   position:relative;border-bottom:1px dotted var(--green-deep);
