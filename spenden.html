@@ -99,11 +99,51 @@
   <div class="wrap" style="padding:56px 0;">
     <span class="kicker">Fördermitgliedschaft</span>
     <h2 style="font-size:1.375rem;margin-bottom:20px;">Mitglied werden</h2>
-    <p style="max-width:64ch;margin-bottom:24px;">Der Mitgliedsbeitrag beträgt mindestens 36 € jährlich und kann steuerlich als Spende geltend gemacht werden. Füllen Sie den Aufnahmeantrag aus und senden Sie ihn uns zu, per Post oder persönlich vorbeigebracht.</p>
+    <p style="max-width:64ch;margin-bottom:24px;">Der Mitgliedsbeitrag beträgt mindestens 36 € jährlich und kann steuerlich als Spende geltend gemacht werden. Füllen Sie den Aufnahmeantrag aus und senden Sie ihn uns zu, per Post oder persönlich vorbeigebracht – oder melden Sie sich direkt unten online an.</p>
     <div class="hero-actions">
       <a href="dokumente/aufnahmeantrag.pdf" class="btn-orange" target="_blank" rel="noopener">Aufnahmeantrag (PDF)</a>
       <a href="dokumente/datenschutzhinweise-mitglieder.pdf" class="btn-line" target="_blank" rel="noopener">Datenschutzhinweise für Mitglieder (PDF)</a>
     </div>
+
+    <!-- Versand folgt beim Umzug auf Strato (PHP-Mail-Skript), bis dahin bewusst ohne Funktion -->
+    <form class="contact-form" onsubmit="return false" style="margin-top:40px;">
+      <h3>Oder online anmelden</h3>
+      <p class="form-privacy-note" style="margin-top:0;">Die Einzugsermächtigung für den Mitgliedsbeitrag läuft weiterhin separat, per Aufnahmeantrag (siehe oben).</p>
+      <div>
+        <label for="foerder-name">Vorname und Name</label>
+        <input type="text" id="foerder-name" name="name" required>
+      </div>
+      <div>
+        <label for="foerder-geburtsdatum">Geburtsdatum</label>
+        <input type="date" id="foerder-geburtsdatum" name="geburtsdatum" required>
+      </div>
+      <div>
+        <label for="foerder-strasse">Straße und Hausnummer</label>
+        <input type="text" id="foerder-strasse" name="strasse" required>
+      </div>
+      <div>
+        <label for="foerder-plz-ort">Postleitzahl und Ort</label>
+        <input type="text" id="foerder-plz-ort" name="plz_ort" required>
+      </div>
+      <div>
+        <label for="foerder-telefon">Telefon</label>
+        <input type="tel" id="foerder-telefon" name="telefon">
+      </div>
+      <div>
+        <label for="foerder-email">E-Mail</label>
+        <input type="email" id="foerder-email" name="email" required>
+      </div>
+      <label style="display:flex;align-items:flex-start;gap:8px;font-weight:500;font-size:0.938rem;">
+        <input type="checkbox" name="aktiv_mitarbeit" style="margin-top:3px;flex:none;width:18px;height:18px;padding:0;border:none;">
+        <span style="flex:1;">Ich möchte mich auch aktiv im Verein für die Verwirklichung der Vereinsziele einsetzen.</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:8px;font-weight:500;font-size:0.938rem;">
+        <input type="checkbox" name="datenschutz_zustimmung" required style="margin-top:3px;flex:none;width:18px;height:18px;padding:0;border:none;">
+        <span style="flex:1;">Ich habe die <a href="dokumente/datenschutzhinweise-mitglieder.pdf" target="_blank" rel="noopener" style="color:var(--green-deep);">Datenschutzhinweise für Mitglieder</a> gelesen und bin mit der Verarbeitung meiner Daten zur Mitgliederverwaltung einverstanden.</span>
+      </label>
+      <p class="form-privacy-note">Mit dem Absenden beantragen Sie die Mitgliedschaft im Ambulanten Hospizdienst Wilhelmshaven-Friesland e. V. Über die Aufnahme entscheidet der Vorstand.</p>
+      <button type="submit" class="btn-dark">Mitgliedschaft beantragen</button>
+    </form>
   </div>
 </div>
 </main>
