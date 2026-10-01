@@ -161,6 +161,12 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .team-card p{font-size:0.781rem;color:var(--green-deep);font-weight:700;text-transform:uppercase;letter-spacing:0.03em;}
 @media(max-width:820px){.team-card{width:160px;}}
 
+.begleitteam-details{margin-top:28px;}
+.begleitteam-details summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;font-family:'Quicksand',sans-serif;font-weight:700;color:var(--green-deep);font-size:0.938rem;}
+.begleitteam-details summary::-webkit-details-marker{display:none;}
+.begleitteam-details summary::before{content:'';width:9px;height:9px;border-right:2px solid var(--green-deep);border-bottom:2px solid var(--green-deep);transform:rotate(-45deg);transition:transform 0.15s;}
+.begleitteam-details[open] summary::before{transform:rotate(45deg);}
+
 .transition{padding:64px 0;}
 .transition .rule{border-top:1px solid var(--line);}
 
