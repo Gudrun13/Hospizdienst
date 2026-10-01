@@ -239,6 +239,26 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .form-privacy-note{font-size:0.813rem;color:var(--ink-soft);max-width:44ch;margin-top:-4px;}
 .form-privacy-note a{color:var(--green-deep);font-weight:600;border-bottom:1px solid var(--green-deep);}
 
+/* Glossar-Begriffe: Fachwörter mit Erklärung beim Hover/Fokus */
+.glossar-begriff{
+  position:relative;border-bottom:1px dotted var(--green-deep);
+  color:var(--green-deep);font-weight:700;cursor:help;
+}
+.glossar-begriff .glossar-tooltip{
+  visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;
+  transform:translateX(-50%);width:240px;background:var(--ink);color:var(--white);
+  font-size:0.813rem;font-weight:500;line-height:1.5;padding:12px 14px;border-radius:8px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.2);transition:opacity 0.15s ease;z-index:20;
+}
+.glossar-begriff .glossar-tooltip::after{
+  content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:6px solid transparent;border-top-color:var(--ink);
+}
+.glossar-begriff:hover .glossar-tooltip,
+.glossar-begriff:focus .glossar-tooltip,
+.glossar-begriff:focus-visible .glossar-tooltip{visibility:visible;opacity:1;}
+@media(max-width:480px){.glossar-begriff .glossar-tooltip{width:200px;}}
+
 /* Lange Rechtstexte (Datenschutz, Impressum): einspaltig, gut lesbar */
 .legal-content{max-width:74ch;}
 .legal-content h2{font-size:1.25rem;margin-top:40px;margin-bottom:12px;}
