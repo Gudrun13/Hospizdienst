@@ -272,6 +272,19 @@ nav a:hover, nav a.active{color:var(--green-deep);}
 .glossar-begriff:focus-visible .glossar-tooltip{visibility:visible;opacity:1;}
 @media(max-width:480px){.glossar-begriff .glossar-tooltip{width:200px;}}
 
+/* Leitsätze: aufklappbare Liste der sieben Grundsätze */
+.leitsaetze-details{margin-top:28px;}
+.leitsaetze-details summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;font-family:'Quicksand',sans-serif;font-weight:700;color:var(--green-deep);font-size:0.938rem;}
+.leitsaetze-details summary::-webkit-details-marker{display:none;}
+.leitsaetze-details summary::before{content:"";width:9px;height:9px;border-right:2px solid var(--green-deep);border-bottom:2px solid var(--green-deep);transform:rotate(-45deg);transition:transform 0.15s ease;}
+.leitsaetze-details[open] summary::before{transform:rotate(45deg);}
+.leitsaetze-list{margin-top:28px;display:flex;flex-direction:column;gap:28px;}
+.leitsaetze-item{display:flex;gap:18px;align-items:flex-start;}
+.leitsaetze-num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--green-deep);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:'Quicksand',sans-serif;font-weight:700;font-size:1.063rem;}
+.leitsaetze-item h3{font-family:'Quicksand',sans-serif;font-size:1.063rem;margin-bottom:6px;color:var(--ink);}
+.leitsaetze-item p{color:var(--ink-soft);font-size:0.938rem;line-height:1.65;max-width:62ch;}
+.leitsaetze-item p+p{margin-top:8px;}
+
 /* Lange Rechtstexte (Datenschutz, Impressum): einspaltig, gut lesbar */
 .legal-content{max-width:74ch;}
 .legal-content h2{font-size:1.25rem;margin-top:40px;margin-bottom:12px;}
