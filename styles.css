@@ -329,3 +329,47 @@ footer{padding:48px 0 32px;border-top:1px solid var(--line);}
 .skip-link:focus{left:16px;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+
+/* Farbcode der Angebote: Gruen fuer Erwachsene, Orange fuer Kinder und Familien */
+.thema-erwachsene{border-top:4px solid var(--green-deep) !important;}
+.thema-kinder{border-top:4px solid var(--orange) !important;}
+.service-strip .thema-kinder h3,.service-strip .thema-kinder h3 a{color:var(--orange-deep);}
+.service-strip a.cell{display:block;color:inherit;transition:background .2s;}
+.service-strip a.cell:hover{background:var(--green-pale);}
+.service-strip a.cell.thema-kinder:hover{background:var(--orange-pale);}
+.service-strip .mehr{display:inline-block;margin-top:10px;font-size:0.875rem;font-weight:700;color:var(--green-deep);}
+.service-strip .thema-kinder .mehr{color:var(--orange-deep);}
+.page-header.kinder{background:var(--orange-pale);}
+.page-header.kinder .kicker{color:var(--orange-deep);}
+.kinder-band{background:var(--orange-pale);}
+.kinder-band .kicker{color:var(--orange-deep);}
+
+/* Text-Link mit Pfeil */
+.text-link{color:var(--green-deep);font-weight:700;border-bottom:2px solid var(--orange-deep);}
+.thema-link-kinder{color:var(--orange-deep);border-bottom-color:var(--orange-deep);}
+
+/* Aufklappbare Details fuer laengere Texte */
+.aufklapp{margin-top:20px;}
+.aufklapp summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;font-family:'Quicksand',sans-serif;font-weight:700;color:var(--green-deep);font-size:0.938rem;}
+.aufklapp summary::-webkit-details-marker{display:none;}
+.aufklapp summary::before{content:"";width:9px;height:9px;border-right:2px solid var(--green-deep);border-bottom:2px solid var(--green-deep);transform:rotate(-45deg);transition:transform 0.15s ease;}
+.aufklapp[open] summary::before{transform:rotate(45deg);}
+.aufklapp > div{margin-top:16px;}
+.aufklapp h3{font-family:'Quicksand',sans-serif;font-size:1.063rem;margin:18px 0 6px;color:var(--ink);}
+.aufklapp p{color:var(--ink-soft);}
+.aufklapp p+p{margin-top:8px;}
+.thema-kinder-box .aufklapp summary{color:var(--orange-deep);}
+.thema-kinder-box .aufklapp summary::before{border-color:var(--orange-deep);}
+
+/* Liste im Fliesstext */
+.text-liste{color:var(--ink-soft);font-size:1rem;line-height:1.65;max-width:58ch;padding-left:20px;margin:4px 0 16px;}
+
+/* Platzhalter fuer Angaben, die noch vom Buero kommen */
+.platzhalter{background:var(--orange-pale);color:var(--orange-deep);border:1px dashed var(--orange-deep);border-radius:4px;padding:0 6px;font-weight:700;}
+
+/* Kleineres, mittig gesetztes Bild */
+.bild-mittig{max-width:520px;margin:8px auto 0;}
+.bild-mittig img{width:100%;height:auto;border-radius:4px;display:block;}
+.row .content-row-inner h2{margin-bottom:12px;}
+.row .content-row-inner p{color:var(--ink-soft);margin-bottom:12px;max-width:58ch;}
+.row-inner p+p{margin-top:12px;}
