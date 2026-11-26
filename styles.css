@@ -373,3 +373,20 @@ footer{padding:48px 0 32px;border-top:1px solid var(--line);}
 .row .content-row-inner h2{margin-bottom:12px;}
 .row .content-row-inner p{color:var(--ink-soft);margin-bottom:12px;max-width:58ch;}
 .row-inner p+p{margin-top:12px;}
+
+/* Startseite kompakt */
+.start-kacheln{grid-template-columns:repeat(4,1fr);}
+.start-kacheln .cell{padding:26px 22px;}
+.kachel-bild{aspect-ratio:4/3;overflow:hidden;border-radius:4px;margin-bottom:14px;}
+.kachel-bild img{width:100%;height:100%;object-fit:cover;display:block;}
+@media(max-width:1000px){.start-kacheln{grid-template-columns:repeat(2,1fr);}.start-kacheln .cell{border-left:none;}.start-kacheln .cell:nth-child(even){border-left:1px solid var(--line);}}
+@media(max-width:560px){.start-kacheln .cell{padding:18px 12px;}.start-kacheln p{font-size:0.813rem;}}
+.merkmale{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:48px 0 32px;margin:0;}
+.merkmale li{display:flex;gap:14px;align-items:flex-start;}
+.merkmale svg{flex:none;width:30px;height:30px;fill:none;stroke:var(--green-deep);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+.merkmale span{font-size:0.938rem;color:var(--ink-soft);}
+.merkmale strong{display:block;color:var(--ink);font-size:1rem;}
+@media(max-width:700px){.merkmale{grid-template-columns:1fr;gap:16px;padding:36px 0 24px;}}
+.row .banner-flat{margin-bottom:56px;}
+.kontakt-aufklapp{margin-top:36px;max-width:480px;}
+.kontakt-aufklapp .contact-form{margin-top:16px;}
